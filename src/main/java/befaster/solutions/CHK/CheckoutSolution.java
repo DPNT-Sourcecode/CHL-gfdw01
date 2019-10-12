@@ -77,7 +77,7 @@ public class CheckoutSolution {
         Integer numberOfEProducts = mappedInput.get(Product.E);
         Integer numberOfBProducts = mappedInput.get(Product.B);
 
-        if(numberOfBProducts>0) {
+        if(numberOfBProducts!=null && numberOfBProducts>0) {
 
             while (numberOfEProducts >=2) {
                 numberOfBProducts--;
@@ -92,6 +92,7 @@ public class CheckoutSolution {
 
 
 }
+
 
 
 
