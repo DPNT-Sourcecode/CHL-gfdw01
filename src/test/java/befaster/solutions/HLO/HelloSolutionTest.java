@@ -1,4 +1,4 @@
-package befaster.solutions.SUM;
+package befaster.solutions.HLO;
 
 import befaster.solutions.HLO.HelloSolution;
 import org.hamcrest.MatcherAssert;
@@ -47,3 +47,4 @@ public class HelloSolutionTest {
 
 
 }
+
