@@ -9,7 +9,27 @@ public enum Product {
 	C(20),
 	D(15),
 	E(40,SpecialPromotion.PROMOTION_E),
-	F(10,SpecialPromotion.PROMOTION_F);
+	F(10,SpecialPromotion.PROMOTION_F),
+	G(20),
+	H(10,Arrays.asList(Promotion.PROMOTION_H1,Promotion.PROMOTION_H2)),
+	I(35),
+	J(60),
+	K(80,Arrays.asList(Promotion.PROMOTION_K1)),
+	L(90),
+	M(15),
+	N(40),
+	O(10),
+	P(50,Arrays.asList(Promotion.PROMOTION_P1)),
+	Q(30,Arrays.asList(Promotion.PROMOTION_Q1)),
+	R(50,SpecialPromotion.PROMOTION_R),
+	S(30),
+	T(20),
+	U(40,SpecialPromotion.PROMOTION_U),
+	V(50,Arrays.asList(Promotion.PROMOTION_V1,Promotion.PROMOTION_V2)),
+	W(20),
+	X(90),
+	Y(10),
+	Z(50);
 
 	private Integer price;
 
@@ -44,3 +64,4 @@ public enum Product {
 		return this.specialPromotion;
 	}
 }
+
