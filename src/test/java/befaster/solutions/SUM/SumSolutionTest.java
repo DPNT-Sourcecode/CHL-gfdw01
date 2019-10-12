@@ -17,7 +17,25 @@ public class SumSolutionTest {
 
     @Test
     public void givenTwoOperandsWhenCalculatingSumThenReturnCorrectValue() {
-        assertThat(sum.compute(1, 1), equalTo(2));
+
+        int sum = this.sum.compute(1, 1);
+
+        assertThat(sum, equalTo(2));
+    }
+
+    @Test
+    public void givenMinimumValuesWhenCalculatingSumThenReturnCorrectResult() {
+
+        int sum = this.sum.compute(0,0);
+
+        assertThat(sum,equalTo(0));
+    }
+
+    @Test
+    public void givenMaximumValuesWhenCalculatingSumThenReturnCorrectResult() {
+
+        int sum = this.sum.compute(100,100);
+
+        assertThat(sum,equalTo(200));
     }
 }
-
