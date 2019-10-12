@@ -3,9 +3,13 @@ package befaster.solutions.SUM;
 
 public class SumSolution {
 
-    public int compute(int x, int y) {
+    /**
+     * Adds two given operands and returns the sum
+     */
+    public int add(int firstOperand, int secondOperand) {
 
-       return x+y;
+       return firstOperand+secondOperand;
     }
 
 }
+

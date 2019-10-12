@@ -39,7 +39,7 @@ class EntryPointMapping {
     }
 
     Object sum(List<JsonElement> p) {
-        return sumSolution.compute(p.get(0).getAsInt(), p.get(1).getAsInt());
+        return sumSolution.add(p.get(0).getAsInt(), p.get(1).getAsInt());
     }
 
     Object hello(List<JsonElement> p) {
@@ -66,3 +66,4 @@ class EntryPointMapping {
         return checkoutSolution.checkout(p.get(0).getAsString());
     }
 }
+
