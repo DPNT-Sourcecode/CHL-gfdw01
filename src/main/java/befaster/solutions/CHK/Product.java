@@ -1,7 +1,7 @@
 package befaster.solutions.CHK;
 
 public enum Product {
-	A(50,Promotion.PROMOTION_A),
+	A(50,Promotion.PROMOTION_A1),
 	B(30,Promotion.PROMOTION_B),
 	C(20),
 	D(15),
@@ -30,3 +30,4 @@ public enum Product {
 		return this.promotion;
 	}
 }
+

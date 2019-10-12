@@ -98,4 +98,12 @@ public class CheckoutSolutionTest {
 
 		MatcherAssert.assertThat(checkout,CoreMatchers.equalTo(40));
 	}
+
+	@Test
+	public void givenFreeProductRuleWhenCheckOutThenShowResult() {
+		Integer checkout = checkoutSolution.checkout("EEB");
+
+		MatcherAssert.assertThat(checkout,CoreMatchers.equalTo(80));
+	}
 }
+

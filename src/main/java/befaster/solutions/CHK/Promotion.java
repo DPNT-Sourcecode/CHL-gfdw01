@@ -2,7 +2,7 @@ package befaster.solutions.CHK;
 
 public enum Promotion {
 
-	PROMOTION_A(3,130),
+	PROMOTION_A1(3,130),
 
 	PROMOTION_A2(5,200),
 
@@ -39,3 +39,4 @@ public enum Promotion {
 
 	public Product getFreeProduct() {return freeProduct;}
 }
+
