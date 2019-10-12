@@ -36,6 +36,17 @@ public class CheckoutSolution {
 
             Integer value = entry.getValue();
 
+            Promotion currentPromotion = key.getPromotion();
+
+            if(currentPromotion!=null) {
+
+                while(value > currentPromotion.getQuantity()){
+                    checkOut = checkOut + currentPromotion.getNewPrice();
+                    value = value - currentPromotion.getQuantity();
+                }
+
+            }
+
             checkOut = checkOut + key.getPrice() * value;
         }
         return checkOut;
@@ -62,6 +73,7 @@ public class CheckoutSolution {
 
 
 }
+
 
 
 
