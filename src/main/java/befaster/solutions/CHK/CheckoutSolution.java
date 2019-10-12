@@ -109,6 +109,7 @@ public class CheckoutSolution {
                         numberOfCurrentProducts--;
                     }
 
+                    if(numberOfCurrentProducts>0)
                     appliedTimes++;
                 }
                 Integer numberOfProductsOfTypeFreeProduct = mappedInput.get(freeProduct);
@@ -166,4 +167,5 @@ public class CheckoutSolution {
 
 
 }
+
 
