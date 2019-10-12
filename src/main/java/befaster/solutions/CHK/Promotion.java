@@ -8,10 +8,20 @@ public enum Promotion {
 
 	PROMOTION_B(2,45),
 
-	PROMOTION_E(2,Product.B),
+	PROMOTION_H1(5,45),
 
-	PROMOTION_F(2,Product.F);
+	PROMOTION_H2(10,80),
 
+	PROMOTION_K1(2,150),
+
+	PROMOTION_P1(5,200),
+
+	PROMOTION_Q1(3,80),
+
+	PROMOTION_V1(2,90),
+
+	PROMOTION_V2(3,130);
+	
 	private Integer quantity;
 
 	private Integer newPrice;
