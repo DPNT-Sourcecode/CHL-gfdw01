@@ -36,7 +36,7 @@ public class CheckoutSolution {
 
             if(currentPromotions!=null) {
 
-                currentPromotions.sort(Comparator.comparing(Promotion::getQuantity));
+                currentPromotions.sort((Promotion a, Promotion b) -> b.getQuantity().compareTo(a.getQuantity()));
 
                 for(Promotion promotion : currentPromotions) {
 
@@ -106,5 +106,6 @@ public class CheckoutSolution {
 
 
 }
+
 
 
