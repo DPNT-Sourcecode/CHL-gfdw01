@@ -23,4 +23,3 @@ public enum Promotion {
 		return newPrice;
 	}
 }
-

@@ -5,13 +5,9 @@ import java.util.Map;
 
 public class CheckoutSolution {
 
-    private InputValidationService validationService;
-
     public Integer checkout(String skus) {
 
-        Integer checkOut = 0;
-
-        validationService = new InputValidationService();
+        InputValidationService validationService = new InputValidationService();
 
         if(skus == null || skus.isEmpty()) {
             return 0;
@@ -23,11 +19,11 @@ public class CheckoutSolution {
 
         Map<Product,Integer> mappedInput = computeInputMap(skus);
 
-        checkOut = computeCheckOut(mappedInput);
-        return checkOut;
+        return computeCheckOut(mappedInput);
     }
 
     private Integer computeCheckOut(Map<Product, Integer> mappedInput) {
+
         Integer checkOut = 0;
 
         for(Map.Entry<Product,Integer> entry : mappedInput.entrySet()) {
@@ -41,10 +37,11 @@ public class CheckoutSolution {
             if(currentPromotion!=null) {
 
                 while(value > currentPromotion.getQuantity()){
+
                     checkOut = checkOut + currentPromotion.getNewPrice();
+
                     value = value - currentPromotion.getQuantity();
                 }
-
             }
 
             checkOut = checkOut + key.getPrice() * value;
@@ -73,8 +70,3 @@ public class CheckoutSolution {
 
 
 }
-
-
-
-
-

@@ -29,4 +29,3 @@ public enum Product {
 		return this.promotion;
 	}
 }
-
