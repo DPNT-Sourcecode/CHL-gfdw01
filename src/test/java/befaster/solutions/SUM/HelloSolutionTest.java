@@ -31,7 +31,3 @@ public class HelloSolutionTest {
 		MatcherAssert.assertThat(message,equalTo("Hello, World!"));
 	}
 }
-
-
-
-

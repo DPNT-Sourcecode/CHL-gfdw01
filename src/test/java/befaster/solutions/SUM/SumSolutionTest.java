@@ -43,4 +43,3 @@ public class SumSolutionTest {
         assertThat(sum,equalTo(200));
     }
 }
-
