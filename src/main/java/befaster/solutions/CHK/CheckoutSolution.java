@@ -65,8 +65,13 @@ public class CheckoutSolution {
 
         }
 
+        Integer numberOfEProducts = mappedInput.get("E");
+        mappedInput.get(B)
+
+
         return mappedInput;
     }
 
 
 }
+
