@@ -142,19 +142,6 @@ public class CheckoutSolutionTest {
 
 		MatcherAssert.assertThat(checkout,CoreMatchers.equalTo(20));
 	}
-
-	@Test
-	public void givenFFWhenCheckoutThenShowResulta(){
-		Integer checkout = checkoutSolution.checkout("ABCDEFABCDEF");
-
-		MatcherAssert.assertThat(checkout,CoreMatchers.equalTo(20));
-	}
-
-	@Test
-	public void givenFFWhenCheckoutThenShowResultb(){
-		Integer checkout = checkoutSolution.checkout("CDFFAECBDEAB");
-
-		MatcherAssert.assertThat(checkout,CoreMatchers.equalTo(20));
-	}
 }
+
 
