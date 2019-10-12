@@ -71,6 +71,8 @@ public class CheckoutSolution {
 
         }
 
+        applySpecialPromotions(mappedInput);
+
         /*for(Promotion promotion:Promotion.values()) {
 
             Product freeProduct = promotion.getFreeProduct();
@@ -86,6 +88,19 @@ public class CheckoutSolution {
 
 
         return mappedInput;
+    }
+
+    private void applySpecialPromotions(Map<Product, Integer> mappedInput) {
+
+        for(Product product:mappedInput.keySet()) {
+
+            SpecialPromotion specialPromotion = product.getSpecialPromotion();
+            if(specialPromotion !=null){
+
+                Integer numberOfCurrentProducts = mappedInput.get(product);
+                specialPromotion.getQuantity()
+            }
+        }
     }
 
     private void applyPromotionForEProduct(Map<Product, Integer> mappedInput) {
@@ -130,4 +145,5 @@ public class CheckoutSolution {
 
 
 }
+
 

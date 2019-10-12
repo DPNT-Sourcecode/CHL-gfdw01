@@ -14,5 +14,14 @@ public enum SpecialPromotion {
 		this.quantity = quantity;
 		this.freeProduct = freeProduct;
 	}
+
+	public Integer getQuantity() {
+		return quantity;
+	}
+
+	public Product getFreeProduct() {
+		return freeProduct;
+	}
 }
+
 
