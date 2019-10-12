@@ -34,7 +34,7 @@ public class CheckoutSolution {
 
             List<Promotion> currentPromotions = key.getPromotions();
 
-            if(currentPromotions!=null) {
+            if(value > 0 && currentPromotions!=null) {
 
                 currentPromotions.sort(
                         (Promotion a, Promotion b)
@@ -130,3 +130,4 @@ public class CheckoutSolution {
 
 
 }
+
