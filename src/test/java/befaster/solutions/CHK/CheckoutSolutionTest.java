@@ -121,5 +121,13 @@ public class CheckoutSolutionTest {
 		MatcherAssert.assertThat(checkout,CoreMatchers.equalTo(410));
 
 	}
+
+	@Test
+	public void givenNewProductFWhenCheckOutThenShowResult() {
+		Integer checkout = checkoutSolution.checkout("F");
+
+		MatcherAssert.assertThat(checkout,CoreMatchers.equalTo(10));
+	}
 }
+
 
