@@ -2,31 +2,31 @@ package befaster.solutions.CHK;
 
 public enum Promotion {
 
-	PROMOTION_A(Product.A,3,130),
+	PROMOTION_A(3,130),
 
-	PROMOTION_B(Product.B,2,45),
+	PROMOTION_A2(5,200),
 
-	PROMOTION_E(Product.E,2,Product.B);
+	PROMOTION_B(2,45),
+
+	PROMOTION_E(2,Product.B);
 
 	private Integer quantity;
 
 	private Integer newPrice;
 
-	private Product appliedProductPromotion;
+	private Product freeProduct;
 
-	Promotion(Product appliedProductPromotion,Integer quantity,Integer newPrice) {
-		this.appliedProductPromotion = appliedProductPromotion;
+	Promotion(Integer quantity,Integer newPrice) {
+
 		this.quantity = quantity;
 		this.newPrice = newPrice;
 	}
 
-	Promotion(Product appliedProductPromotion,Integer quantity, Product freeProduct) {
+	Promotion(Integer quantity, Product freeProduct) {
 
 		this.quantity = quantity;
 
-		this.appliedProductPromotion = appliedProductPromotion;
-		
-		this.newPrice = appliedProductPromotion.getPrice() * quantity + freeProduct.getPrice();
+		this.freeProduct = freeProduct;
 	}
 
 	public Integer getQuantity() {
@@ -36,5 +36,6 @@ public enum Promotion {
 	public Integer getNewPrice() {
 		return newPrice;
 	}
-}
 
+	public Product getFreeProduct() {return freeProduct;}
+}
