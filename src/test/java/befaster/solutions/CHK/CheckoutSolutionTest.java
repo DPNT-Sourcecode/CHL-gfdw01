@@ -100,10 +100,18 @@ public class CheckoutSolutionTest {
 	}
 
 	@Test
+	public void givenNewProductEAndBWhenCheckOutThenShowResult() {
+		Integer checkout = checkoutSolution.checkout("EB");
+
+		MatcherAssert.assertThat(checkout,CoreMatchers.equalTo(70));
+	}
+
+	@Test
 	public void givenFreeProductRuleWhenCheckOutThenShowResult() {
 		Integer checkout = checkoutSolution.checkout("EEB");
 
 		MatcherAssert.assertThat(checkout,CoreMatchers.equalTo(80));
 	}
 }
+
 

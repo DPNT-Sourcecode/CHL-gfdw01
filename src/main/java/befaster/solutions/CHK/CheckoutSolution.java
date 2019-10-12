@@ -51,7 +51,7 @@ public class CheckoutSolution {
 
     private Map<Product,Integer> computeInputMap(String skus) {
 
-        Map<Product,Integer> mappedInput = new HashMap<>();
+        Map<Product,Integer> mappedInput = initialiseMap();
 
         for(int i=0;i<skus.length();i++){
 
@@ -90,8 +90,17 @@ public class CheckoutSolution {
         return mappedInput;
     }
 
+    private Map<Product, Integer> initialiseMap() {
+        Map<Product,Integer> map = new HashMap<>();
+        for(Product product: Product.values()) {
+            map.putIfAbsent(product,0);
+        }
+        return map;
+    }
+
 
 }
+
 
 
 
