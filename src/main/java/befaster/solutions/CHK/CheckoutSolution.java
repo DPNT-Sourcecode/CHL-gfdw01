@@ -92,6 +92,15 @@ public class CheckoutSolution {
             mappedInput.put(Product.B,numberOfBProducts);
         }
 
+        Integer initialNumberOfFProducts = mappedInput.get(Product.F);
+        Integer numberOfFProducts = initialNumberOfFProducts;
+        Integer appliedTimes = 0;
+        while(numberOfFProducts>=3) {
+            appliedTimes++;
+            numberOfFProducts = numberOfFProducts - 3;
+        }
+        mappedInput.put(Product.F, initialNumberOfFProducts-appliedTimes);
+
 
         return mappedInput;
     }
@@ -109,6 +118,7 @@ public class CheckoutSolution {
 
 
 }
+
 
 
 
