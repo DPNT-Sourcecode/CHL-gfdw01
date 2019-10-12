@@ -1,10 +1,11 @@
 package befaster.solutions.CHK;
 
+import java.util.Arrays;
 import java.util.List;
 
 public enum Product {
-	A(50,Promotion.PROMOTION_A1),
-	B(30,Promotion.PROMOTION_B),
+	A(50, Arrays.asList(Promotion.PROMOTION_A1,Promotion.PROMOTION_A2),
+	B(30,Arrays.asList(Promotion.PROMOTION_B)),
 	C(20),
 	D(15),
 	E(40);
@@ -27,10 +28,11 @@ public enum Product {
 		return this.price;
 	}
 
-	public Promotion getPromotion() {
+	public List<Promotion> getPromotion() {
 
-		return this.promotion;
+		return this.promotions;
 	}
 }
+
 
 
