@@ -1,7 +1,5 @@
 package befaster.solutions.CHK;
 
-import befaster.runner.SolutionNotImplementedException;
-
 public class CheckoutSolution {
 
     private InputValidationService validationService;
@@ -25,6 +23,7 @@ public class CheckoutSolution {
 
 
 }
+
 
 
 
