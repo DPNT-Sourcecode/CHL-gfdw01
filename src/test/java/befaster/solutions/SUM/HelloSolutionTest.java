@@ -27,8 +27,10 @@ public class HelloSolutionTest {
 	@Test
 	public void givenGivenCorrectMessageWhenRunningHelloThenSuccess() {
 
-		MatcherAssert.assertThat(helloSolution.hello("Alex"),equalTo("hello to the world"));
+		String message = helloSolution.hello("Alex");
+		MatcherAssert.assertThat(message,equalTo("hello to the world"));
 	}
 }
+
 
 
