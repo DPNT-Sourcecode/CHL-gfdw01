@@ -104,12 +104,12 @@ public class CheckoutSolution {
                 Integer appliedTimes = 0;
                 while(numberOfCurrentProducts>=quantity) {
 
-                    appliedTimes++;
-
                     numberOfCurrentProducts = numberOfCurrentProducts-quantity;
                     if(freeProduct.equals(product)) {
                         numberOfCurrentProducts--;
                     }
+
+                    appliedTimes++;
                 }
                 Integer numberOfProductsOfTypeFreeProduct = mappedInput.get(freeProduct);
 
@@ -166,3 +166,4 @@ public class CheckoutSolution {
 
 
 }
+
