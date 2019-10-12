@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public enum Product {
-	A(50, Arrays.asList(Promotion.PROMOTION_A1,Promotion.PROMOTION_A2),
+	A(50, Arrays.asList(Promotion.PROMOTION_A1,Promotion.PROMOTION_A2)),
 	B(30,Arrays.asList(Promotion.PROMOTION_B)),
 	C(20),
 	D(15),
@@ -28,11 +28,12 @@ public enum Product {
 		return this.price;
 	}
 
-	public List<Promotion> getPromotion() {
+	public List<Promotion> getPromotions() {
 
 		return this.promotions;
 	}
 }
+
 
 
 

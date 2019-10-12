@@ -2,6 +2,7 @@ package befaster.solutions.CHK;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -34,7 +35,7 @@ public class CheckoutSolution {
 
             Integer value = entry.getValue();
 
-            Promotion currentPromotion = key.getPromotion();
+            List<Promotion> currentPromotions = key.getPromotions();
 
             if(currentPromotion!=null) {
 
@@ -103,6 +104,7 @@ public class CheckoutSolution {
 
 
 }
+
 
 
 
