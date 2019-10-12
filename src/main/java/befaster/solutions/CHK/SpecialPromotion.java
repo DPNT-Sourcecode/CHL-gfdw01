@@ -4,7 +4,13 @@ public enum SpecialPromotion {
 
 	PROMOTION_E(2,"B"),
 
-	PROMOTION_F(2,"F");
+	PROMOTION_F(2,"F"),
+
+	PROMOTION_N(3,"M"),
+
+	PROMOTION_R(3,"Q"),
+
+	PROMOTION_U(3,"U");
 
 	private Integer quantity;
 
@@ -23,3 +29,4 @@ public enum SpecialPromotion {
 		return freeProduct;
 	}
 }
+

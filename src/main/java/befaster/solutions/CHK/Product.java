@@ -17,7 +17,7 @@ public enum Product {
 	K(80,Arrays.asList(Promotion.PROMOTION_K1)),
 	L(90),
 	M(15),
-	N(40),
+	N(40,SpecialPromotion.PROMOTION_N),
 	O(10),
 	P(50,Arrays.asList(Promotion.PROMOTION_P1)),
 	Q(30,Arrays.asList(Promotion.PROMOTION_Q1)),
@@ -64,3 +64,4 @@ public enum Product {
 		return this.specialPromotion;
 	}
 }
+

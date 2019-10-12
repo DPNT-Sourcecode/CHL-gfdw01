@@ -21,7 +21,7 @@ public enum Promotion {
 	PROMOTION_V1(2,90),
 
 	PROMOTION_V2(3,130);
-	
+
 	private Integer quantity;
 
 	private Integer newPrice;
@@ -51,3 +51,4 @@ public enum Promotion {
 
 	public Product getFreeProduct() {return freeProduct;}
 }
+
