@@ -8,7 +8,9 @@ public enum Promotion {
 
 	PROMOTION_B(2,45),
 
-	PROMOTION_E(2,Product.B);
+	PROMOTION_E(2,Product.B),
+
+	PROMOTION_F(2,Product.F);
 
 	private Integer quantity;
 
@@ -39,3 +41,4 @@ public enum Promotion {
 
 	public Product getFreeProduct() {return freeProduct;}
 }
+

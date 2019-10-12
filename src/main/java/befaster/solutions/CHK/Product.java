@@ -8,7 +8,8 @@ public enum Product {
 	B(30,Arrays.asList(Promotion.PROMOTION_B)),
 	C(20),
 	D(15),
-	E(40);
+	E(40),
+	F(10);
 
 	private Integer price;
 
@@ -33,3 +34,4 @@ public enum Product {
 		return this.promotions;
 	}
 }
+
