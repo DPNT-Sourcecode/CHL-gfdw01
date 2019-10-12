@@ -26,6 +26,15 @@ public class CheckoutSolutionTest {
 
 		MatcherAssert.assertThat(checkout, CoreMatchers.equalTo(0));
 	}
+
+	@Test
+	public void givenNotValidInputWhenCheckoutThenShowResult() {
+
+		Integer checkout = checkoutSolution.checkout("a");
+
+		MatcherAssert.assertThat(checkout, CoreMatchers.equalTo(-1));
+	}
 }
+
 
 

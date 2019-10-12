@@ -9,7 +9,10 @@ public class CheckoutSolution {
         if(skus == null || skus.isEmpty()) {
             return 0;
         }
+
+        return -1;
     }
 }
+
 
 
