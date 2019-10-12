@@ -4,7 +4,7 @@ public enum SpecialPromotion {
 
 	PROMOTION_E(2,Product.B),
 
-	PROMOTION_F(3,Product.F);
+	PROMOTION_F(2,Product.F);
 
 	private Integer quantity;
 
@@ -23,5 +23,6 @@ public enum SpecialPromotion {
 		return freeProduct;
 	}
 }
+
 
 

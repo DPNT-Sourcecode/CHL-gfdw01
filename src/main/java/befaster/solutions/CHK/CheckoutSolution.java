@@ -82,9 +82,9 @@ public class CheckoutSolution {
             }
         }*/
 
-        applyPromotionForEProduct(mappedInput);
+       // applyPromotionForEProduct(mappedInput);
 
-        applyPromotionForFProduct(mappedInput);
+      //  applyPromotionForFProduct(mappedInput);
 
 
         return mappedInput;
@@ -112,7 +112,14 @@ public class CheckoutSolution {
                     }
                 }
                 Integer numberOfProductsOfTypeFreeProduct = mappedInput.get(freeProduct);
-                mappedInput.put(freeProduct,)
+
+                Integer newValue = numberOfProductsOfTypeFreeProduct - appliedTimes;
+
+                if(newValue<0) {
+                    mappedInput.put(freeProduct, 0);
+                } else {
+                    mappedInput.put(freeProduct,newValue);
+                }
             }
         }
     }
@@ -159,6 +166,7 @@ public class CheckoutSolution {
 
 
 }
+
 
 
 
