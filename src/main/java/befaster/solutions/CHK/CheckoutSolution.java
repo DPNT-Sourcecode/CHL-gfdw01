@@ -100,7 +100,7 @@ public class CheckoutSolution {
 
                 Integer numberOfCurrentProducts = mappedInput.get(product);
                 Integer quantity = specialPromotion.getQuantity();
-                Product freeProduct = specialPromotion.getFreeProduct();
+                Product freeProduct = Product.valueOf(specialPromotion.getFreeProduct());
                 Integer appliedTimes = 0;
                 while(numberOfCurrentProducts>=quantity) {
 
@@ -166,8 +166,3 @@ public class CheckoutSolution {
 
 
 }
-
-
-
-
-

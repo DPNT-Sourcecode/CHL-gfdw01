@@ -2,15 +2,15 @@ package befaster.solutions.CHK;
 
 public enum SpecialPromotion {
 
-	PROMOTION_E(2,Product.B),
+	PROMOTION_E(2,"B"),
 
-	PROMOTION_F(2,Product.F);
+	PROMOTION_F(2,"F");
 
 	private Integer quantity;
 
-	private Product freeProduct;
+	private String freeProduct;
 
-	SpecialPromotion(Integer quantity, Product freeProduct) {
+	SpecialPromotion(Integer quantity, String freeProduct) {
 		this.quantity = quantity;
 		this.freeProduct = freeProduct;
 	}
@@ -19,10 +19,7 @@ public enum SpecialPromotion {
 		return quantity;
 	}
 
-	public Product getFreeProduct() {
+	public String getFreeProduct() {
 		return freeProduct;
 	}
 }
-
-
-
