@@ -6,7 +6,10 @@ public class CheckoutSolution {
 
     public Integer checkout(String skus) {
 
-       return -1;
+        if(skus == null || skus.isEmpty()) {
+            return 0;
+        }
     }
 }
+
 

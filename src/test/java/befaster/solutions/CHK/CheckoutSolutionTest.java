@@ -24,7 +24,8 @@ public class CheckoutSolutionTest {
 
 		Integer checkout = checkoutSolution.checkout("");
 
-		MatcherAssert.assertThat(checkout, CoreMatchers.equalTo(-1));
+		MatcherAssert.assertThat(checkout, CoreMatchers.equalTo(0));
 	}
 }
+
 
