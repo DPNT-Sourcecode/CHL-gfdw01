@@ -28,14 +28,17 @@ public class HelloSolutionTest {
 	public void givenCorrectMessageWhenRunningHelloThenSuccess() {
 
 		String message = helloSolution.hello("Alex");
-		MatcherAssert.assertThat(message,equalTo("Hello, World!"));
+		MatcherAssert.assertThat(message,equalTo("Hello, Alex!"));
 	}
 
 	@Test
 	public void givenNameWhenRunningHelloThenSayHello() {
 
-		String mikeMessage = helloSolution.hello("Mike");
-		assertThat(mikeMessage,equalTo("Hello, Mike!"));
+		String johnMessage = helloSolution.hello("John");
+		assertThat(johnMessage,equalTo("Hello, John!"));
 	}
+
+
 }
+
 
