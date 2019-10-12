@@ -33,7 +33,3 @@ public enum Product {
 		return this.promotions;
 	}
 }
-
-
-
-

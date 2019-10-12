@@ -113,5 +113,3 @@ public class CheckoutSolutionTest {
 		MatcherAssert.assertThat(checkout,CoreMatchers.equalTo(80));
 	}
 }
-
-

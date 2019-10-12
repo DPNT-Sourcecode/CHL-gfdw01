@@ -39,4 +39,3 @@ public enum Promotion {
 
 	public Product getFreeProduct() {return freeProduct;}
 }
-
