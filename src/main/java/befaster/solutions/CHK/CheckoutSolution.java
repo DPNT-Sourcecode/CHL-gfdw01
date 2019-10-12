@@ -95,15 +95,24 @@ public class CheckoutSolution {
         for(Product product:mappedInput.keySet()) {
 
             SpecialPromotion specialPromotion = product.getSpecialPromotion();
+
             if(specialPromotion !=null){
 
                 Integer numberOfCurrentProducts = mappedInput.get(product);
                 Integer quantity = specialPromotion.getQuantity();
                 Product freeProduct = specialPromotion.getFreeProduct();
+                Integer appliedTimes = 0;
                 while(numberOfCurrentProducts>=quantity) {
+
                     appliedTimes++;
+
                     numberOfCurrentProducts = numberOfCurrentProducts-quantity;
+                    if(freeProduct.equals(product)) {
+                        numberOfCurrentProducts--;
+                    }
                 }
+                Integer numberOfProductsOfTypeFreeProduct = mappedInput.get(freeProduct);
+                mappedInput.put(freeProduct,)
             }
         }
     }
@@ -150,6 +159,7 @@ public class CheckoutSolution {
 
 
 }
+
 
 
 
