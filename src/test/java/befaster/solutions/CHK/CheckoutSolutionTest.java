@@ -131,9 +131,8 @@ public class CheckoutSolutionTest {
 
 	@Test
 	public void givenFreeProductForFRuleWhenCheckoutThenShowResult(){
+		Integer checkout = checkoutSolution.checkout("FFFFFF");
 
+		MatcherAssert.assertThat(checkout,CoreMatchers.equalTo(40));
 	}
 }
-
-
-

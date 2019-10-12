@@ -80,10 +80,20 @@ public class CheckoutSolution {
             }
         }*/
 
+        applyPromotionForEProduct(mappedInput);
+
+        applyPromotionForFProduct(mappedInput);
+
+
+        return mappedInput;
+    }
+
+    private void applyPromotionForEProduct(Map<Product, Integer> mappedInput) {
+
         Integer numberOfEProducts = mappedInput.get(Product.E);
         Integer numberOfBProducts = mappedInput.get(Product.B);
 
-        if(numberOfBProducts!=null && numberOfBProducts>0) {
+        if(numberOfBProducts>0) {
 
             while (numberOfEProducts >=2) {
                 numberOfBProducts--;
@@ -91,18 +101,20 @@ public class CheckoutSolution {
             }
             mappedInput.put(Product.B,numberOfBProducts);
         }
+    }
 
+    private void applyPromotionForFProduct(Map<Product, Integer> mappedInput) {
         Integer initialNumberOfFProducts = mappedInput.get(Product.F);
+
         Integer numberOfFProducts = initialNumberOfFProducts;
+
         Integer appliedTimes = 0;
+
         while(numberOfFProducts>=3) {
             appliedTimes++;
             numberOfFProducts = numberOfFProducts - 3;
         }
         mappedInput.put(Product.F, initialNumberOfFProducts-appliedTimes);
-
-
-        return mappedInput;
     }
 
     private Map<Product, Integer> initialiseMap() {
@@ -118,8 +130,3 @@ public class CheckoutSolution {
 
 
 }
-
-
-
-
-
