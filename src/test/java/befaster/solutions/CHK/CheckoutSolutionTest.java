@@ -78,7 +78,18 @@ public class CheckoutSolutionTest {
 
 	@Test
 	public void givenThreeAProductsWhenCheckoutThenShowResult() {
+
 		Integer checkout = checkoutSolution.checkout("AAA");
+
 		MatcherAssert.assertThat(checkout, CoreMatchers.equalTo(130));
 	}
+
+	@Test
+	public void givenTwoBProductsWhenCheckoutThenShowResult() {
+
+		Integer checkout = checkoutSolution.checkout("BB");
+
+		MatcherAssert.assertThat(checkout, CoreMatchers.equalTo(45));
+	}
 }
+

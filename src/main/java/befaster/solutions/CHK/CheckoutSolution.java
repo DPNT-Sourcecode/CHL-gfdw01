@@ -36,7 +36,7 @@ public class CheckoutSolution {
 
             if(currentPromotion!=null) {
 
-                while(value > currentPromotion.getQuantity()){
+                while(value >= currentPromotion.getQuantity()){
 
                     checkOut = checkOut + currentPromotion.getNewPrice();
 
@@ -70,3 +70,4 @@ public class CheckoutSolution {
 
 
 }
+
