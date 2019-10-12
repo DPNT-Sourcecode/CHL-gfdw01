@@ -16,7 +16,8 @@ public class SumSolutionTest {
     }
 
     @Test
-    public void compute_sum() {
+    public void givenTwoOperandsWhenCalculatingSumThenReturnCorrectValue() {
         assertThat(sum.compute(1, 1), equalTo(2));
     }
 }
+
