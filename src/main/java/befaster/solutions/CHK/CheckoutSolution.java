@@ -32,7 +32,7 @@ public class CheckoutSolution {
 
             Integer value = entry.getValue();
 
-            Promotion currentPromotion = key.getPromotion();
+            Promotion currentPromotion = key.getPromotions();
 
             if(currentPromotion!=null) {
 
@@ -70,4 +70,5 @@ public class CheckoutSolution {
 
 
 }
+
 
