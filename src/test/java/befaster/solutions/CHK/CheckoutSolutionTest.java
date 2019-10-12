@@ -112,4 +112,14 @@ public class CheckoutSolutionTest {
 
 		MatcherAssert.assertThat(checkout,CoreMatchers.equalTo(80));
 	}
+
+	@Test
+	public void givenBetterPromotionRuleWhenCheckOutThenShowResult() {
+
+		Integer checkout = checkoutSolution.checkout("AAAAAAAABA");
+
+		MatcherAssert.assertThat(checkout,CoreMatchers.equalTo(410));
+
+	}
 }
+

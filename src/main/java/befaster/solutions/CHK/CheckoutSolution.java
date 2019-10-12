@@ -50,7 +50,7 @@ public class CheckoutSolution {
 
             checkOut = checkOut + key.getPrice() * value;
         }
-        
+
         return checkOut;
     }
 
@@ -106,4 +106,5 @@ public class CheckoutSolution {
 
 
 }
+
 
