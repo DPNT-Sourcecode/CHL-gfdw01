@@ -1,5 +1,7 @@
 package befaster.solutions.CHK;
 
+import java.util.List;
+
 public enum Product {
 	A(50,Promotion.PROMOTION_A1),
 	B(30,Promotion.PROMOTION_B),
@@ -9,15 +11,15 @@ public enum Product {
 
 	private Integer price;
 
-	private Promotion promotion;
+	private List<Promotion> promotions;
 
 	Product(Integer price){
 		this.price = price;
 	}
 
-	Product(Integer price,Promotion promotion) {
+	Product(Integer price,List<Promotion> promotions) {
 		this(price);
-		this.promotion = promotion;
+		this.promotions = promotions;
 	}
 
 	public Integer getPrice() {
@@ -30,4 +32,5 @@ public enum Product {
 		return this.promotion;
 	}
 }
+
 

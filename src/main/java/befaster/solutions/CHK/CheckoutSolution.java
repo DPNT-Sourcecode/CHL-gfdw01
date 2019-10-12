@@ -1,7 +1,9 @@
 package befaster.solutions.CHK;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class CheckoutSolution {
 
@@ -57,8 +59,6 @@ public class CheckoutSolution {
 
             Product key = Product.valueOf(skus.charAt(i) + "");
 
-            mappedInput.putIfAbsent(key,0);
-
             Integer currentNumberOfProducts = mappedInput.get(key);
 
             mappedInput.put(key,++currentNumberOfProducts);
@@ -91,15 +91,19 @@ public class CheckoutSolution {
     }
 
     private Map<Product, Integer> initialiseMap() {
+
         Map<Product,Integer> map = new HashMap<>();
+
         for(Product product: Product.values()) {
-            map.putIfAbsent(product,0);
+            map.put(product,0);
         }
+
         return map;
     }
 
 
 }
+
 
 
 
