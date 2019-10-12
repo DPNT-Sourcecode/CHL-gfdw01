@@ -65,6 +65,15 @@ public class CheckoutSolution {
 
         }
 
+        /*for(Promotion promotion:Promotion.values()) {
+
+            Product freeProduct = promotion.getFreeProduct();
+
+            if(freeProduct !=null) {
+
+            }
+        }*/
+
         Integer numberOfEProducts = mappedInput.get(Product.E);
         Integer numberOfBProducts = mappedInput.get(Product.B);
 
@@ -83,5 +92,6 @@ public class CheckoutSolution {
 
 
 }
+
 
 
