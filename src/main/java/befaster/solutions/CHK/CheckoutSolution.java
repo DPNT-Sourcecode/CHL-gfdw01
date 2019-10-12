@@ -1,9 +1,6 @@
 package befaster.solutions.CHK;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class CheckoutSolution {
@@ -37,18 +34,23 @@ public class CheckoutSolution {
 
             List<Promotion> currentPromotions = key.getPromotions();
 
-            if(currentPromotion!=null) {
+            if(currentPromotions!=null) {
 
-                while(value >= currentPromotion.getQuantity()){
+                currentPromotions.sort(Comparator.comparing(Promotion::getQuantity));
 
-                    checkOut = checkOut + currentPromotion.getNewPrice();
+                for(Promotion promotion : currentPromotions) {
 
-                    value = value - currentPromotion.getQuantity();
+                    while(value>=promotion.getQuantity()) {
+                        checkOut = checkOut + promotion.getNewPrice();
+
+                        value = value - promotion.getQuantity();
+                    }
                 }
             }
 
             checkOut = checkOut + key.getPrice() * value;
         }
+        
         return checkOut;
     }
 
@@ -104,3 +106,4 @@ public class CheckoutSolution {
 
 
 }
+
