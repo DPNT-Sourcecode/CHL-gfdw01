@@ -1,26 +1,23 @@
 package befaster.solutions.CHK;
 
-import java.util.Arrays;
-import java.util.List;
-
 public enum Product {
-	A(50, Arrays.asList(Promotion.PROMOTION_A,Promotion.PROMOTION_A2),
-	B(30,Arrays.asList(Promotion.PROMOTION_B)),
+	A(50,Promotion.PROMOTION_A),
+	B(30,Promotion.PROMOTION_B),
 	C(20),
 	D(15),
-	E(40,Arrays.asList(Promotion.PROMOTION_E));
+	E(40);
 
 	private Integer price;
 
-	private List<Promotion> promotions;
+	private Promotion promotion;
 
 	Product(Integer price){
 		this.price = price;
 	}
 
-	Product(Integer price, List<Promotion> promotions) {
+	Product(Integer price,Promotion promotion) {
 		this(price);
-		this.promotions = promotions;
+		this.promotion = promotion;
 	}
 
 	public Integer getPrice() {
@@ -28,9 +25,10 @@ public enum Product {
 		return this.price;
 	}
 
-	public List<Promotion> getPromotions() {
+	public Promotion getPromotion() {
 
-		return this.promotions;
+		return this.promotion;
 	}
 }
+
 
