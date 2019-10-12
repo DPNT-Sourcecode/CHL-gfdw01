@@ -4,7 +4,8 @@ public class HelloSolution {
 
     public String hello(String friendName) {
 
-        return "hello world";
+        return "hello to the world";
     }
 }
+
 
