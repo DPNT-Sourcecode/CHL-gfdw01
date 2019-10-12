@@ -65,8 +65,17 @@ public class CheckoutSolution {
 
         }
 
-        Integer numberOfEProducts = mappedInput.get("E");
-        mappedInput.get(B)
+        Integer numberOfEProducts = mappedInput.get(Product.E);
+        Integer numberOfBProducts = mappedInput.get(Product.B);
+
+        if(numberOfBProducts>0) {
+
+            while (numberOfEProducts >=2) {
+                numberOfBProducts--;
+                numberOfEProducts = numberOfEProducts-2;
+            }
+            mappedInput.put(Product.B,numberOfBProducts);
+        }
 
 
         return mappedInput;
@@ -74,4 +83,5 @@ public class CheckoutSolution {
 
 
 }
+
 
