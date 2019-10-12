@@ -18,8 +18,12 @@ public class CheckoutSolution {
             return -1;
         }
 
+        checkOut = compute(skus);
+
+
         return checkOut;
     }
 
 
 }
+
