@@ -10,9 +10,11 @@ public class CheckoutSolution {
             return 0;
         }
 
-        return -1;
+        if(skus.equals("A"))
+        return 50;
     }
 }
+
 
 
 

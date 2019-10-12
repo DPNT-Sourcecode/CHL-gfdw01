@@ -34,7 +34,16 @@ public class CheckoutSolutionTest {
 
 		MatcherAssert.assertThat(checkout, CoreMatchers.equalTo(-1));
 	}
+
+	@Test
+	public void givenSimpleValidInputWhenCheckoutThenShowResult(){
+
+		Integer checkout = checkoutSolution.checkout("A");
+
+		MatcherAssert.assertThat(checkout, CoreMatchers.equalTo(50));
+	}
 }
+
 
 
 
