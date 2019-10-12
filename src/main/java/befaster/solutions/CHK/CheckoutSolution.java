@@ -23,8 +23,13 @@ public class CheckoutSolution {
 
         Map<Product,Integer> mappedInput = computeInputMap(skus);
 
-
+        checkOut = computeCheckOut(mappedInput);
         return checkOut;
+    }
+
+    private Integer computeCheckOut(Map<Product, Integer> mappedInput) {
+        Integer value = 0;
+        mappedInput.forEach(key->{value= value + key.getPrice()* mappedInput.get(key);});
     }
 
     private Map<Product,Integer> computeInputMap(String skus) {
@@ -48,5 +53,6 @@ public class CheckoutSolution {
 
 
 }
+
 
 
