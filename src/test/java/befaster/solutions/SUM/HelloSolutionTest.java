@@ -38,7 +38,15 @@ public class HelloSolutionTest {
 		assertThat(johnMessage,equalTo("Hello, John!"));
 	}
 
+	@Test
+	public void givenEmptyValueWhenRunningHelloThenCorrectMessageIsShown(){
+
+		String emptyName = helloSolution.hello("");
+		assertThat(emptyName,equalTo("Hello, !"));
+	}
+
 
 }
+
 
 
