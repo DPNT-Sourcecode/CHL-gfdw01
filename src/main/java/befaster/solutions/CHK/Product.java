@@ -8,12 +8,13 @@ public enum Product {
 	B(30,Arrays.asList(Promotion.PROMOTION_B)),
 	C(20),
 	D(15),
-	E(40),
-	F(10);
+	E(40,SpecialPromotion.PROMOTION_E),
+	F(10,SpecialPromotion.PROMOTION_F);
 
 	private Integer price;
 
 	private List<Promotion> promotions;
+	private SpecialPromotion specialPromotion;
 
 	Product(Integer price){
 		this.price = price;
@@ -22,6 +23,11 @@ public enum Product {
 	Product(Integer price,List<Promotion> promotions) {
 		this(price);
 		this.promotions = promotions;
+	}
+
+	Product(Integer price, SpecialPromotion specialPromotion) {
+		this(price);
+		this.specialPromotion = specialPromotion;
 	}
 
 	public Integer getPrice() {
@@ -33,5 +39,10 @@ public enum Product {
 
 		return this.promotions;
 	}
+
+	public SpecialPromotion getSpecialPromotion() {
+		return this.specialPromotion;
+	}
 }
+
 
